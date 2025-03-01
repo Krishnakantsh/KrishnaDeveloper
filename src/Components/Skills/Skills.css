@@ -1,0 +1,29 @@
+.animationBox{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(34, 209, 7);
+  border-radius: 70% 20% 50% 30%/25% 20% 30% 30%;
+  filter: blur(100px);
+  opacity: 0.35;
+}
+
+
+.glassEffect{
+  background: linear-gradient(135deg , rgba(255,255,255,0.2) , rgba(255,255,255,0));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 15px;
+  border: 3px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+}
+
+
+.glassEffect h4{
+  border: 1.6px solid rgb(34, 209, 7);
+  padding:3px 15px;
+  width: fit-content;
+  font-size: 1vw;
+  font-weight: 300;
+  border-radius: 30px;
+}

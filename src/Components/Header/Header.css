@@ -1,0 +1,6 @@
+.header{
+  position: sticky;
+  top: 0;
+  background-color: rgba(32,32,32,0.1 );
+  backdrop-filter: blur(300px);
+}
