@@ -24,7 +24,9 @@ function HeroSection() {
   return (
     <div  className='flex justify-between items-center align-middle h-[40vw] w-full p-4 mt-10 ' >
          <div className="heroLeft w-1/2  h-fit flex flex-col gap-3 text-start ">
-          <p className='font-semibold text-blue-500 text-lg  ' >WELCOME TO MY WORLD</p>
+
+          {/* <p className='font-semibold text-yellow-500 text-2xl ' >Website under construction</p> */}
+          <p className='font-semibold text-blue-500 text-lg ' >WELCOME TO MY WORLD</p>
           <h1 className='font-bold  lg:text-6xl mt-6 ' >I'm Krishna</h1>
           <h1 className='font-bold  lg:text-6xl  ' >A <span 
           id='animated-text' 

@@ -63,7 +63,7 @@ function CssDesignsArea() {
             autoPlay
             muted
             loop
-            className="w-[35vw] h-[10vw] object-cover"
+            className="w-full h-[10vw] object-cover"
           />
         </div>
       </div>

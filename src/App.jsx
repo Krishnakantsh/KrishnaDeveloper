@@ -13,12 +13,14 @@ import Project2 from './Components/CssDesigns/Project2/Project2.jsx'
 import Project3 from './Components/CssDesigns/Project3/Project3.jsx'
 import CssDesignsArea from './Components/CssDesigns/CssDeisgnsArea/CssDesignsArea.jsx'
 import CodeViewer from './Components/CodeViewer/CodeViewer.jsx'
+import Alert from './Components/Alert/Alert.jsx'
 
 
 function App() {
 
   return (
       <div > 
+           <Alert/>
            <Header/>
            <HeroSection/>
            <WhatDo/>
