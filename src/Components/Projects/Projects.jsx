@@ -45,7 +45,7 @@ const projectCardData = [
 function Projects() {
 
   return (
-    <div className=" flex flex-col justify-between items-center h-fit w-full  lg:p-5 mt-20 gap-5 ">
+    <div  className=" flex flex-col justify-between items-center h-fit w-full  lg:p-5 mt-20 gap-5 ">
       <h1 className="font-bold  text-center text-3xl md:text-4xl   lg:text-5xl pt-5 " style={{ color:"rgb(0,255,0)"  }}   >
         Our Projects
       </h1>

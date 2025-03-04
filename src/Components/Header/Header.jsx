@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -19,10 +18,10 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 
 const fileurl = "/krishnaResume.pdf"
 
-function Header() {
+function Header({ scrollToSection, heroRef, projectsRef, contactRef,latestRef }) {
   const [open, setOpen] = React.useState(false);
 
-
+ 
   //  download resume concept 
   const downLoadResume = (url) => {
     console.log("Download button clicked!"); // Check if this logs
@@ -44,26 +43,30 @@ function Header() {
     {
       icon: <HomeOutlinedIcon />,
       name: "Home",
+      link:"heroRef"
     },
     {
       icon: <LibraryBooksOutlinedIcon />,
       name: "Projects",
+      link:"projectsRef"
     },
     {
       icon: <CollectionsBookmarkOutlinedIcon />,
       name: "Latest Work",
+       link:"latestRef"
     },
     {
       icon: <LinkedInIcon />,
-      name: "Github",
+      name: "Linked",
     },
     {
       icon: <GitHubIcon />,
-      name: "Linked",
+      name: "Github",
     },
     {
       icon: <LocalPhoneOutlinedIcon />,
       name: "Contact",
+       link:"contactRef"
     },
   ];
 
@@ -71,7 +74,8 @@ function Header() {
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
         {iconsData.map((e) => (
-          <ListItem key={e.name} disablePadding>
+ 
+          <ListItem  onClick={() => scrollToSection(`${e.link}`)}  key={e.name} disablePadding>
             <ListItemButton sx={{ marginTop: "2vw" }}>
               <ListItemIcon sx={{ fontSize: 40, color: "rgb(255,255,255)" }}>
                 {React.cloneElement(e.icon, { sx: { fontSize: 40 } })}
@@ -110,7 +114,7 @@ function Header() {
   );
 
   return (
-    <div className=" flex justify-between  items-center align-middle h-fit w-full p-2 z-50  header ">
+    <div  className=" flex justify-between  items-center align-middle h-fit w-full p-2 z-50  header ">
       <div className=" flex justify-between  items-center  w-fit gap-5 lg:p-2  ">
         <div className="lg:ml-4 sm:h-15 sm:w-15 lg:h-18   h-20 w-20  lg:w-18 flex  rounded-full  shadow-md shadow-amber-50">
           <a
@@ -130,23 +134,24 @@ function Header() {
       </div>
       <div className="hidden  lg:flex h-full p-1 ">
         <ul className="flex md:gap-8  xl:gap-10 text-bold text-lg   md:text-lg ">
-          <li>
-            <a href="">Home</a>
+          <li
+          >  
+            <a href="#" onClick={() => scrollToSection(heroRef)}  >Home</a>
           </li>
           <li>
-            <a href="">Projects</a>
+            <a href="# " onClick={() => scrollToSection(projectsRef)}   >Projects</a>
           </li>
           <li className="  hidden lg:block ">
-            <a href="">Latest Work</a>
+            <a href="#"   onClick={() => scrollToSection(latestRef)} >Latest Work</a>
           </li>
           <li>
-            <a href="">Github</a>
+            <a href="https://github.com/Krishnakantsh">Github</a>
           </li>
           <li>
-            <a href="">Linkedin</a>
+            <a href="https://www.linkedin.com/in/krishna-kant-sharma-developer92">Linkedin</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="#" onClick={() => scrollToSection(contactRef)}   >Contact</a>
           </li>
         </ul>
       </div>

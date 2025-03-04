@@ -5,7 +5,7 @@ import { Button } from '@mui/material'
 
 function Contacts() {
   return (
-    <div className='flex flex-col w-full h-fit  pt-5 '  >
+    <div   className='flex flex-col w-full h-fit  pt-5 '  >
 
        <h1 className=' text-center font-bold text-4xl sm:text-5xl md:text-6xl  text-white opacity-60' >Contact With Me</h1>
        <div  className=' grid md:grid-cols-[1fr_2fr] w-full gap-8 p-5 mt-10 h-fitcontactContainer   ' >
