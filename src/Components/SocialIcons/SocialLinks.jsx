@@ -29,11 +29,11 @@ const socialMeta = [
 
 function SocialLinks({ size }) {
   return (
-    <div className="flex flex-col justify-between items-start gap-5 w-full h-fit ">
+    <div className='flex flex-col justify-between items-center lg:items-start  gap-5 w-full h-fit'  >
       <h4 className=" font-semibold text-amber-500 text-xl">Find me on </h4>
       <div className="flex w-fit gap-5 justify-between items-center socialIcons">
         {socialMeta.map((e) => (
-          <div
+          <div key={e.link}
             className="flex justify-center items-center bg-[rgb(32,32,32)]  rounded-full "
             style={{
               width: `${size}px`,

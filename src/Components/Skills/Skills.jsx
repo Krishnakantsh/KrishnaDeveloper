@@ -81,19 +81,21 @@ function Skills() {
 
   return (
     <div className="flex flex-col h-fit  py-1 gap-7 mt-15 rounded-2xl my-20 ">
-      <h1 className=" lg:text-5xl  text-green-400  font-bold" >Skills & Work Experience In Technologies</h1>
+      <h1 className=" text-2xl md:text-3xl lg:text-5xl   text-green-400  font-bold" >Skills & Work Experience In Technologies</h1>
 
-      <div  className="flex h-fit  py-1 gap-7 mt-5 rounded-2xl my-20 " >
-        <div className=" flex flex-col justify-between gap-10 items-end h-fit   w-1/3  relative  ">
-          <div className="h-100 w-150 absolute animationBox "></div>
-          <div className=" flex flex-col justify-center items-center text-4xl gap-5 font-bold w-[25vw] h-[20vw]  glassEffect   ">
-            <h1>1.5+ Years</h1>
+      <div  className="flex flex-col lg:flex-row   h-fit  py-1 gap-7 mt-5 rounded-2xl my-20 " >
+        <div className=" flex flex-col justify-between gap-10  items-center lg:items-end h-fit w-full lg:w-1/3  relative  ">
+          
+          <div className=" hidden lg:flex  h-100 w-150 absolute animationBox "></div>
+
+          <div className=" flex flex-col justify-center items-center text-2xl  md:text-4xl lg:text-2xl gap-5 font-bold w-[100%] h-[45vw]  lg:w-[25vw] lg:h-[20vw]  glassEffect   ">
+            <h1   >1.5+ Years</h1>
             <h1>Experience Of All</h1>
             <h1>Technologies</h1>
           </div>
        
-          <div className=" flex flex-wrap justify-between items-start  gap-4.5 p-5 font-bold w-[25vw] min-h-[20vw]  glassEffect   ">
-            <h1 className=" text-2xl text-white font-semibold mb-5 ">
+          <div className=" flex flex-wrap justify-between items-start text-sm  lg:text-sm md:gap-3  gap-1.5 lg:gap-4.5 p-5 font-bold lg:w-[25vw] lg:min-h-[20vw]  glassEffect   ">
+            <h1 className=" text-4xl lg:text-2xl text-white font-semibold mb-5 ">
               Java Specific Technologies
             </h1>
             <h4>Core Java</h4>
@@ -123,28 +125,30 @@ function Skills() {
           </div>
         </div>
 
-        <div className=" flex justify-center items-start flex-wrap h-fit w-2/3  px-5 gap-10 ">
+        <div className=" flex justify-center items-start flex-wrap h-fit w-full lg:w-2/3 lg:px-5 gap-5 lg:gap-10 ">
           {skillsData.map((data) => (
             <div
-              className=" flex flex-col  justify-between items-center p-5 w-[12vw] h-[15vw]  rounded-2xl  "
+            key={data.name}
+              className=" flex flex-col  justify-between items-center p-5   w-[90vw] md:w-[16vw] lg:w-[12vw] 
+  h-fit md:h-[22vw] lg:h-[15vw] rounded-2xl  "
               style={{
                 boxShadow:
                   "inset -6px -10px 10px rgba(255,255,255,0.5) , inset 2px 2px 10px rgba(255,255,255,0.5) ",
               }}
             >
-              <div className=" flex justify-center items-center h-25 w-fit   skillsCardImageDiv">
+              <div className=" flex justify-center items-center h-35 lg:h-25 w-fit   skillsCardImageDiv">
                 <img
                   className=" h-full w-fit object-cover object-top  "
                   src={data.image}
                   alt="skillsImage"
                 />
-              </div>
-              <h1 className=" font-semibold text-xl text-orange-400 ">
+              </div >
+             <div> <h1 className=" font-semibold text-2xl lg:text-xl text-orange-400 ">
                 {data.name}
               </h1>
               <h3 className=" font-light text-lg text-green-400 ">
                 {data.experience}
-              </h3>
+              </h3></div>
             </div>
           ))}
         </div>

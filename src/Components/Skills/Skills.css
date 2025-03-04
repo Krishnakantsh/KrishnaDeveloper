@@ -23,7 +23,7 @@
   border: 1.6px solid rgb(34, 209, 7);
   padding:3px 15px;
   width: fit-content;
-  font-size: 1vw;
+  /* font-size: 1vw; */
   font-weight: 300;
   border-radius: 30px;
 }

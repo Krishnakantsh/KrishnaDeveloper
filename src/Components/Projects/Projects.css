@@ -1,10 +1,4 @@
-.projectsContainer{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.projectDetailsDivLeft{
-  border-right: 2px solid rgba(255,255,255,0.8);
-}
+
 
 .projectDetailsDivLeft  h2{
   width: 100%;
@@ -35,7 +29,7 @@
 
 
 .projectsCard{
-  border-top: 3px solid rgba(255,255,255,0.8);
+  border-top: 3px solid rgba(0,255,0,0.8);
   border-radius: 15px ;
   box-shadow: 0 0 200px rgba(77, 100, 203, 0.345);
 }
@@ -51,3 +45,6 @@
 .projectDetailsDivRight Button:hover{
    background-color:rgb(248, 130, 3);
 }
+
+
+

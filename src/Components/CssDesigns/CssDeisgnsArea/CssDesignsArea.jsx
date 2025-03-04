@@ -17,11 +17,6 @@ function CssDesignsArea() {
       component:<Project1/>
     },
     {
-      data:Store[1].project2,
-      videourl:'/Videos/project2vv.mp4',
-      component:<Project2/>
-    },
-    {
       data:Store[2].project3,
       videourl:'/Videos/projectvv3.mp4',
       component:<Project3/>
@@ -32,18 +27,20 @@ function CssDesignsArea() {
  
 
   return (
-    <div className=" flex flex-col justify-between items-center my-5 py-1 w-full min-h-[10vw] ">
-      <h1 className=" lg:text-5xl md:text-lg sm:text-sm font-bold text-green-400 hover:text-amber-300  ">
+    <div className=" flex flex-col justify-between items-center my-5 py-1 w-full min-h-[10vw]  ">
+      <h1 className="text-2xl sm:text-4xl  md:text-5xl font-bold text-green-400 hover:text-amber-300  ">
         Our Some Usable Template
       </h1>
     
 
      {
       dataStore.map((e)=>
-        <div className=" flex flex-col  w-full h-fit   mt-5  rounded-lg">
-      <div className=" grid grid-cols-2 w-full  gap-10 p-5">
         <div
-          className="flex justify-center items-center h-[15vw] w-full  rounded-3xl p-10 "
+         key={e.videourl}
+        className=" flex flex-col  w-full h-fit   mt-5  rounded-lg">
+      <div className=" grid  grid-cols-1  md:grid-cols-2 w-full  gap-10 p-5">
+        <div
+          className="flex justify-center items-center  md:h-[15vw] w-full  rounded-3xl p-10 "
           style={{
             boxShadow:
               "inset -3px -3px 20px rgb(255,255,255),  inset 1px 1px  10px rgba(255,255,255,0.6)",
@@ -52,7 +49,7 @@ function CssDesignsArea() {
           {e.component}
         </div>
         <div
-          className="flex justify-center items-start h-[15vw]  rounded-3xl p-10  pt-12"
+          className="flex justify-center items-center md:h-[15vw]  rounded-3xl p-10  pt-12"
           style={{
             boxShadow:
               "inset -3px -3px 20px rgb(255,255,255),  inset 0 0  5px rgba(255,255,255,0.6)",
@@ -63,7 +60,7 @@ function CssDesignsArea() {
             autoPlay
             muted
             loop
-            className="w-full h-[10vw] object-cover"
+            className="  w-full  md:h-[8vw] lg:h-[10vw] object-cover  "
           />
         </div>
       </div>

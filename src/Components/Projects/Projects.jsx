@@ -17,7 +17,7 @@ const projectCardData = [
     duration:"32 Days",
     contribution:"Self",
     Frontend:"React Js, Tailwind, CSS3, JavaScript, HTML5",
-    Backend:"Java, Spring Boot , Razorpay etc..",
+    Backend:"Java, Spring Boot , Razorpay",
     Status:"Completed",
     imgurl:'https://themes-park.net/product/html/reeni/assets/images/latest-portfolio/portfoli-img-2.jpg'
   },
@@ -41,30 +41,32 @@ const projectCardData = [
   }
 ]
 
+
 function Projects() {
 
   return (
-    <div className=" flex flex-col justify-between items-center h-fit w-full  p-5 mt-20 gap-5">
-      <h1 className="font-bold  text-center text-5xl pt-5 " style={{ color:"rgb(0,255,0)"  }}   >
+    <div className=" flex flex-col justify-between items-center h-fit w-full  lg:p-5 mt-20 gap-5 ">
+      <h1 className="font-bold  text-center text-3xl md:text-4xl   lg:text-5xl pt-5 " style={{ color:"rgb(0,255,0)"  }}   >
         Our Projects
       </h1>
-      <h3 className="font-semibold  text-center text-3xl text-white pt-5 ">
+      <h3 className="font-semibold  text-center text-3xl text-white lg:pt-5 w-full  ">
         Transforming Ideas into Implementation
       </h3>
-      <p className="font-light  text-center text-xl text-white opacity-50 w-1/2 ">
+      <p className="font-light  text-center text-xl text-white opacity-50 w-full lg:w-1/2 ">
         Business consulting consultants provide expert advice and guida
         businesses to help them improve their performance, efficiency, and
         organizational
       </p>
 
-      <div className="w-full h-fit gap-8 mt-15  projectsContainer">
+      <div className="grid grid-cols-1  lg:grid-cols-2 w-full h-fit gap-8 mt-15  projectsContainer">
         {projectCardData.map((e) => (
-          <div className="  h-[45vw]  projectsCard  ">
+          <div key={e.duration}   className=" h-fit lg:h-[50vw]  projectsCard  ">
             <div className="flex justify-center items-center  w-full h-7/10  p-5 rounded-2xl imageDiv">
                <img src={e.imgurl} alt="projectImage" className="  h-full w-full object-cover object-top rounded-2xl "    />
             </div>
-            <div className="flex w-full h-3/10 p-5 projectDetailsDiv ">
-              <div className=" flex flex-col gap-1.5 w-2/3 text-sm justify-between items-center projectDetailsDivLeft ">
+            <div className="flex flex-col lg:flex-row w-full h-3/10 p-5  projectDetailsDiv  ">
+
+              <div className=" flex flex-col gap-1.5 md:w-full md:border-0 lg:border-r-2  lg:w-2/3 text-sm justify-between items-center projectDetailsDivLeft ">
                 <h2 className=""  >
                   <span>Project Name </span>
                   <span>:</span>
@@ -96,10 +98,11 @@ function Projects() {
                   <span>{e.Status}</span>
                 </h2>
               </div>
-              <div className="flex flex-col h-full w-1/3 justify-between  items-center py-5 projectDetailsDivRight">
+              <div className="flex flex-col h-full w-full gap-5 mt-5 lg:mt-0 lg:w-1/3 justify-between  items-center py-5 projectDetailsDivRight">
                 <Button
                   variant="outlined"
                   className=" rounded-2xl "
+                  // onClick={window.location.href='https://starlifebank.up.railway.app/home'}
                   sx={{
                     bgcolor: "rgb(0,0,0) ",
                     color: "rgb(255,255,255)",
